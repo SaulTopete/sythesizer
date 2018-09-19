@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button scaleButton;
 
     private Button challenge1;
+    private Button challenge5;
+    private Button challenge6;
 
     private SoundPool soundPool;
 
@@ -142,6 +144,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         scaleButton.setOnClickListener(this);
         challenge1.setOnClickListener(this);
+        challenge5.setOnClickListener(this);
+        challenge6.setOnClickListener(this);
     }
 
     private void wireWidgets() {
@@ -160,7 +164,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         scaleButton = findViewById(R.id.button_synth_scale);
         challenge1 = findViewById(R.id.button_synthe_challenge1);
-
+        challenge5 = findViewById(R.id.button_synth_challenge5);
+        challenge6 = findViewById(R.id.button_synth_challenge6);
     }
 
     @Override
@@ -174,8 +179,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button_synthe_challenge1:
                 playChallenge1();
                 break;
-            case R.id.button_synth_challenge2:
-                playChallenge2();
+            case R.id.button_synth_challenge5:
+                playChallenge5();
+                break;
+            case R.id.button_synth_challenge6:
+                playChallenge6();
                 break;
         }
     }
@@ -209,18 +217,37 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playNote(noteE);
     }
 
-    private void playChallenge2(){
+    private void playChallenge5(){
         playNote(noteA);
+        delay(WHOLE_NOTE/2);
         playNote(noteA);
+        delay(WHOLE_NOTE/2);
         playNote(highE);
-        playNote(highE/2);
+        delay(WHOLE_NOTE/2);
+        playNote(highE);
         delay(WHOLE_NOTE/2);
         playNote(highFf);
-        playNote(highFf/2);
+        delay(WHOLE_NOTE/2);
+        playNote(highFf);
+        delay(WHOLE_NOTE/2);
         playNote(highE);
+        delay(WHOLE_NOTE);
         playNote(noteD);
-        playNote(noteD/3);
+        delay(WHOLE_NOTE/2);
+        playNote(noteD);
+        delay(WHOLE_NOTE/2);
+        playNote(noteCc);
+        delay(WHOLE_NOTE/2);
+        playNote(noteCc);
+        delay(WHOLE_NOTE/2);
+        playNote(noteB);
+        delay(WHOLE_NOTE/2);
+        playNote(noteB);
+        delay(WHOLE_NOTE/2);
+        playNote(noteA);
+    }
 
+    private void playChallenge6(){
 
     }
 
