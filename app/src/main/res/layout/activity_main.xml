@@ -48,34 +48,39 @@
         android:id="@+id/button_synth_scale"
         android:layout_width="75dp"
         android:layout_height="53dp"
+        android:layout_marginBottom="88dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:text="Play Scale"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_synthe_challenge1"
-        app:layout_constraintHorizontal_bias="0.046"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="366dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button_synthe_challenge1"
         android:layout_width="112dp"
         android:layout_height="52dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="92dp"
+        android:layout_marginEnd="40dp"
         android:text="Challenge 1"
-        app:layout_constraintEnd_toStartOf="@+id/button_synth_challenge5"
-        tools:layout_editor_absoluteY="366dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_synth_challenge5" />
 
     <Button
         android:id="@+id/button_synth_c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/button_synth_scale"
         app:layout_constraintEnd_toStartOf="@+id/button_synth_e"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_synth_b" />
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_b"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_synth_cc"
@@ -101,21 +106,23 @@
         android:id="@+id/button_synth_e"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
         android:text="E"
+        app:layout_constraintBottom_toTopOf="@+id/button_synthe_challenge1"
         app:layout_constraintStart_toEndOf="@+id/button_synth_c"
-        app:layout_constraintTop_toBottomOf="@+id/button_synth_dd" />
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_dd"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_synth_f"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
         android:text="F"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button_synth_cc"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,11 +130,11 @@
         android:id="@+id/button_synth_ff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Ff"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button_synth_d"
         app:layout_constraintTop_toBottomOf="@+id/button_synth_f" />
 
@@ -135,11 +142,11 @@
         android:id="@+id/button_synth_g"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="G"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button_synth_dd"
         app:layout_constraintTop_toBottomOf="@+id/button_synth_ff" />
 
@@ -147,13 +154,16 @@
         android:id="@+id/button_synth_gg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Gg"
+        app:layout_constraintBottom_toTopOf="@+id/button_synth_challenge5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/button_synth_e"
-        app:layout_constraintTop_toBottomOf="@+id/button_synth_g" />
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_g"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/button_synth_dd"
@@ -169,19 +179,39 @@
         android:id="@+id/button_synth_challenge5"
         android:layout_width="104dp"
         android:layout_height="51dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="92dp"
+        android:layout_marginEnd="16dp"
         android:text="Challenge 5"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="366dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button_synth_challenge6"
         android:layout_width="106dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="156dp"
         android:layout_marginTop="12dp"
         android:text="Challenge 6"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_synth_challenge5" />
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_challenge5"
+        app:layout_constraintVertical_bias="0.666" />
+
+    <Button
+        android:id="@+id/button_synth_challenge7"
+        android:layout_width="121dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Challenge 7 (Array)"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toEndOf="@+id/button_synth_challenge6"
+        app:layout_constraintTop_toBottomOf="@+id/button_synth_challenge5"
+        app:layout_constraintVertical_bias="0.714" />
 
 </android.support.constraint.ConstraintLayout>

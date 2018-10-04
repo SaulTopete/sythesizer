@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -30,7 +32,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button challenge1;
     private Button challenge5;
-    private Button challenge6;
+    private Button challenge9;
+    private Button challenge7;
 
     private SoundPool soundPool;
 
@@ -145,7 +148,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         scaleButton.setOnClickListener(this);
         challenge1.setOnClickListener(this);
         challenge5.setOnClickListener(this);
-        challenge6.setOnClickListener(this);
+        challenge9.setOnClickListener(this);
+        challenge7.setOnClickListener(this);
     }
 
     private void wireWidgets() {
@@ -165,7 +169,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         scaleButton = findViewById(R.id.button_synth_scale);
         challenge1 = findViewById(R.id.button_synthe_challenge1);
         challenge5 = findViewById(R.id.button_synth_challenge5);
-        challenge6 = findViewById(R.id.button_synth_challenge6);
+        challenge9 = findViewById(R.id.button_synth_challenge6);
+        challenge7 = findViewById(R.id.button_synth_challenge7);
     }
 
     @Override
@@ -183,7 +188,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 playChallenge5();
                 break;
             case R.id.button_synth_challenge6:
-                playChallenge6();
+                playChallenge9();
+                break;
+            case R.id.button_synth_challenge7:
+                playChallenge7();
                 break;
         }
     }
@@ -247,8 +255,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         playNote(noteA);
     }
 
-    private void playChallenge6(){
+    private void playChallenge9(){
+        playChallenge5();
+        delay(WHOLE_NOTE);
+        playNote(highE);
+        delay(WHOLE_NOTE/2);
+        playNote(highE);
+        delay(WHOLE_NOTE/2);
+        playNote(noteD);
+        delay(WHOLE_NOTE/2);
+        playNote(noteD);
+        delay(WHOLE_NOTE/2);
+        playNote(noteCc);
+        delay(WHOLE_NOTE/2);
+        playNote(noteCc);
+        delay(WHOLE_NOTE/2);
+        playNote(noteB);
+    }
 
+    private void playChallenge7(){
+       int chall7[] = {noteA, noteA, highE, highE, highFf, highFf, highE, noteD, noteD, noteCc, noteCc, noteB, noteB, noteA};
+       for(int i = 0; i < chall7.length; i++){
+           if(i > 6 && i < 8){
+               delay(WHOLE_NOTE);
+           }
+           playNote(i);
+           delay(WHOLE_NOTE/2);
+       }
+        Toast.makeText(this, "When you think about it, it sounds like 'Twinkle Twinkle Little Star :)", Toast.LENGTH_LONG).show();
     }
 
     private void playSong(Song scale){
